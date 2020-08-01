@@ -1,0 +1,31 @@
+body {
+  font-family: Helvetica;
+  color:#d0d0d0;
+  background-color:#101010;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 10%;
+  margin-left: 10%;
+  overflow: visible;
+}
+
+h1 {
+  color:#ffffff;
+}
+
+a {
+  color:#d0d0d0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
