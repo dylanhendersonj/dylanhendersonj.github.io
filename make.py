@@ -4,6 +4,7 @@ import os
 
 title = "DYLAN HENDERSON"
 headers = ["Animation", "Fabrication", "Films", "About"]
+fabfolders = ["Plastic Flowers Never Wilt", "Other Shores", "Your Fairy Guidemother"]
 icons = [("https://www.instagram.com/dylanjhenderson", "insta.png"),
          ("mailto:dylanhendersonj@gmail.com", "mail.png"),
          ("https://vimeo.com/user81614983", "vimeo.png")]
@@ -49,13 +50,28 @@ def parse(folder):
     # TODO Content
     with open(readme, 'r') as r:
         for line in r:
+        	if line == "do this":
+        		f.write("<h3>")
+                for h in fabfolders:
+                    link = os.path.join(root, "Fabrication", h, "index.html")
+                    f.write("<a href=\"" + link + "\">" + h + "</a>")
+                    f.write(" &nbsp; ")
+                    f.write("</h3>")
             f.write(line)
+    
+    #Fabrication folders
+    #f.write("<h3>")
+    #for h in fabfolders:
+#        link = os.path.join(root, "Fabrication", h, "index.html")
+ #       f.write("<a href=\"" + link + "\">" + h + "</a>")
+  #      f.write(" &nbsp; ")
+   # f.write("</h3>")
 
     # Footer Icons
     f.write("<div class=\"footer\">")
     for link, img in icons:
         f.write("<a href=\"" + link + "\">")
-        f.write("<img src=\"" + os.path.join(root, "media", img) + "\" width=25 height=25/>")
+        f.write("<img src=\"" + os.path.join(root, "media", img) + "\" width=22 height=22/>")
         f.write("</a>")
         f.write(" &nbsp; ")
     f.write("</div>")

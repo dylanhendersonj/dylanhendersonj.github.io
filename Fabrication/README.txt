@@ -1,0 +1,5 @@
+do this
+
+<div style="box-sizing: inherit; width: 320px; height: 200px; position: relative; border: 2px solid #d0d0d0;"><a data-flickr-embed="true" title="The Patient and Doctor"><img src="https://live.staticflickr.com/7823/32502788437_c3eeeb80a7_n.jpg" width="320" height="200" alt="The Patient and Doctor"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<div style="box-sizing: inherit; width: 320px; height: 200px; position: relative; border: 2px solid #d0d0d0;"><a data-flickr-embed="true" title="Screen Shot 2019-03-22 at 3.22.54 PM"><img src="https://live.staticflickr.com/7851/46529250475_9cbb1ab908_n.jpg" width="320" height="200" alt="Screen Shot 2019-03-22 at 3.22.54 PM"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

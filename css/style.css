@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica;
+  font-family: Optima, sans-serif;
   color:#d0d0d0;
   background-color:#101010;
   margin-top: 5%;
@@ -13,6 +13,10 @@ h1 {
   color:#ffffff;
 }
 
+h3 {
+  color:#7e93a6;
+}
+
 a {
   color:#d0d0d0;
   text-decoration: none;
@@ -24,8 +28,7 @@ a:hover {
 
 .footer {
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+  left: 10%;
+  bottom: 2%;
+  text-align: left;
 }
