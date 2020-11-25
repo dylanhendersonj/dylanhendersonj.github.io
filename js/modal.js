@@ -1,3 +1,50 @@
+function launch_modal() {
+  // Create a container
+  var modal = document.createElement('div');
+  modal.className = 'modal';
+  var modal_container = document.createElement('div');
+  modal_container.className = 'modal_container';
+  modal.appendChild(modal_container);
+  document.body.appendChild(modal);
+
+  // Fetch video and image links if available
+  var vimeo_id = this.getAttribute('vimeo_id');
+  var img_src = this.getAttribute('img_src');
+
+  if (vimeo_id) {
+    // Create a video frame
+    var container = document.createElement('div');
+    container.className = 'video_container';
+    var iframe = document.createElement('iframe');
+    iframe.src =
+      "https://player.vimeo.com/video/" +
+      vimeo_id +
+      "?title=0&byline=0&portrait=0&color=d0d0d0";
+    container.appendChild(iframe);
+    modal_container.appendChild(container);
+  } else if (img_src) {
+    // Create a big image
+    var img = document.createElement('img');
+    img.src = img_src;
+    img.className = "modal_img";
+    modal_container.appendChild(img);
+  }
+
+  // See if there is text
+  for (var i = 0; i < this.children.length; i++) {
+    var child = this.children[i];
+    if (child.className == 'modal_text') {
+      var text_container = document.createElement('div');
+      text_container.className = 'modal_text_display';
+      text_container.innerHTML = child.innerHTML;
+      modal_container.appendChild(text_container);
+    }
+  }
+
+  // Display the modal
+  modal.style.display = 'block';
+}
+
 window.onload = function() {
   // Place the thumbnails in columns
   var thumbnails = document.getElementsByClassName('thumbnail_container');
@@ -20,55 +67,21 @@ window.onload = function() {
       "</div>";
   }
     
-  // Create a modal for the thumbnails
+  // Define click properties for thumbnails
   var thumbnails = document.getElementsByClassName('thumbnail_container');
   for(var i = 0; i < thumbnails.length; i++) {
     var thumbnail = thumbnails[i];
-    thumbnail.onclick = function() {
-      // Create a container
-      var modal = document.createElement('div');
-      modal.className = 'modal';
-      var modal_container = document.createElement('div');
-      modal_container.className = 'modal_container';
-      modal.appendChild(modal_container);
-      document.body.appendChild(modal);
 
-      // Fetch video and image links if available
-      var vimeo_id = this.getAttribute('vimeo_id');
-      var img_src = this.getAttribute('img_src');
-
-      if (vimeo_id) {
-        // Create a video frame
-        var container = document.createElement('div');
-        container.className = 'video_container';
-        var iframe = document.createElement('iframe');
-        iframe.src =
-          "https://player.vimeo.com/video/" +
-          vimeo_id +
-          "?title=0&byline=0&portrait=0&color=d0d0d0";
-        container.appendChild(iframe);
-        modal_container.appendChild(container);
-      } else if (img_src) {
-        // Create a big image
-        var img = document.createElement('img');
-        img.src = img_src;
-        img.className = "modal_img";
-        modal_container.appendChild(img);
-      }
-
-      // See if there is text
-      for (var i = 0; i < this.children.length; i++) {
-        var child = this.children[i];
-        if (child.className == 'modal_text') {
-          var text_container = document.createElement('div');
-          text_container.className = 'modal_text_display';
-          text_container.innerHTML = child.innerHTML;
-          modal_container.appendChild(text_container);
-        }
-      }
-
-      // Display the modal
-      modal.style.display = 'block';
+    // If the thumbnail has a link, just wrap it in <a>
+    var href = thumbnail.getAttribute('href');
+    if (href) {
+      var link = document.createElement('a');
+      link.href = href;
+      link.innerHTML = thumbnail.outerHTML;
+      thumbnail.parentNode.insertBefore(link, thumbnail);
+      thumbnail.remove();
+    } else {
+      thumbnail.onclick = launch_modal;
     }
   }
 }
