@@ -41,6 +41,7 @@ img {
 }
 
 .thumbnail_img {
+  border: 0;
   width: 100%;
   height: auto;
   display: block;
