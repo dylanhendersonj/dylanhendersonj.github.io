@@ -51,7 +51,7 @@ a:hover {
   display: block;
 }
 
-.gallery_element {
+.thumbnail_column {
   float: left;
   width: 48%;
   padding: 1%;
@@ -67,13 +67,20 @@ a:hover {
   opacity: 0; /* By default invisible */
   transition: .2s ease;
   background: #10101080; /* 50% Opacity */
-  color: #d0d0d0;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  display: table;
+}
+
+/* For centering */
+.thumbnail_text_inner {
   text-align: center;
+  color: #d0d0d0;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* Show the thumbnail text when you hover */
@@ -85,13 +92,13 @@ a:hover {
   display: none; /* Invisible at first */
   z-index: 1; /* Sit on top */
   position: fixed; /* Stay in place */
+  background: #10101080; /* 50% Opacity */
+  overflow: auto; /* Enable scroll if needed */
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
   text-align: center;
-  overflow: auto; /* Enable scroll if needed */
-  background: #10101080; /* 50% Opacity */
 }
 
 .modal_container {
@@ -99,6 +106,7 @@ a:hover {
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 2%;
+  background: #101010;
 }
 
 .modal_img {

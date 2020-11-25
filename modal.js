@@ -1,16 +1,40 @@
 window.onload = function() {
-  // Create an onclick function for all thumbnails
+  // Place the thumbnails in columns
   var thumbnails = document.getElementsByClassName('thumbnail_container');
   for(var i = 0; i < thumbnails.length; i++) {
     var thumbnail = thumbnails[i];
+    var thumbnail_column = document.createElement('div');
+    thumbnail_column.className = 'thumbnail_column';
+    thumbnail_column.innerHTML = thumbnail.outerHTML;
+    thumbnail.parentNode.insertBefore(thumbnail_column, thumbnail);
+    thumbnail.remove();
+  }
+
+  // Center the overlay text
+  var thumbnail_texts = document.getElementsByClassName('thumbnail_text');
+  for(var i = 0; i < thumbnail_texts.length; i++) {
+    var thumbnail_text = thumbnail_texts[i];
+    thumbnail_text.innerHTML =
+      "<div class='thumbnail_text_inner'>" +
+      thumbnail_text.innerHTML +
+      "</div>";
+  }
     
+  // Create a modal for the thumbnails
+  var thumbnails = document.getElementsByClassName('thumbnail_container');
+  for(var i = 0; i < thumbnails.length; i++) {
+    var thumbnail = thumbnails[i];
     thumbnail.onclick = function() {
+      // Create a container
       var modal = document.getElementsByClassName('modal')[0];
-      var modal_container = modal.firstElementChild;
+      var modal_container = document.createElement('div');
+      modal_container.className = 'modal_container';
+      modal.appendChild(modal_container);
+
+      // Fetch video and image links if available
       var vimeo_id = this.getAttribute('vimeo_id');
       var img_src = this.getAttribute('img_src');
 
-      // Add a vimeo link
       if (vimeo_id) {
         // Create a video frame
         var container = document.createElement('div');
@@ -20,8 +44,6 @@ window.onload = function() {
           "https://player.vimeo.com/video/" +
           vimeo_id +
           "?title=0&byline=0&portrait=0&color=d0d0d0";
-
-        // Add it to the modal and display
         container.appendChild(iframe);
         modal_container.appendChild(container);
       } else if (img_src) {
@@ -53,13 +75,12 @@ window.onclick = function(event) {
   if (event.target.className == 'modal' ||
       event.target.className == 'modal_container' ||
       event.target.className == 'modal_img') {
-    var node = document.getElementsByClassName('modal_container')[0];
 
-    // Remove all children
-    while (node.firstChild) {
-      node.removeChild(node.firstChild);
+    // Remove any containers
+    var modal_containers = document.getElementsByClassName('modal_container');
+    for (var i = 0; i < modal_containers.length; i++) {
+      modal_containers[i].parentNode.style.display = "none";
+      modal_containers[i].remove();
     }
-    // Make invisible
-    node.parentNode.style.display = "none";
   }
 }
