@@ -1,49 +1,3 @@
-*  {box-sizing: border-box;
-}
-
-.container {
-  position:relative;
-  text-align:center;
-  color: #d0d0d0; 
-}
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.center {
-  text-align: center;
-}
-
-.centered {
-  text-align: center;
-  position: absolute;
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 8px;
-}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-.gallery img:hover{
-  opacity: 0.7;
-}
-
 body {
   font-family: "Optima", sans-serif;
   color:#d0d0d0;
@@ -79,3 +33,88 @@ a:hover {
   text-align: left;
 }
 
+.thumbnail_img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery_element {
+  float: left;
+  width: 48%;
+  padding: 1%;
+}
+
+.thumbnail_container {
+  border: 2px solid #d0d0d0;
+  position: relative;
+}
+
+/* Thumbnail overlay text */
+.thumbnail_text {
+  opacity: 0; /* By default invisible */
+  transition: .2s ease;
+  background: #10101080; /* 50% Opacity */
+  color: #d0d0d0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Show the thumbnail text when you hover */
+.thumbnail_container:hover .thumbnail_text {
+  opacity: 1;
+}
+
+.modal {
+  display: none; /* Invisible at first */
+  z-index: 1; /* Sit on top */
+  position: fixed; /* Stay in place */
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  overflow: auto; /* Enable scroll if needed */
+  background: #10101080; /* 50% Opacity */
+}
+
+.modal_container {
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+}
+
+.modal_img {
+  width: auto;
+  max-width: 100%;
+  max-height: 90vh;
+  display: grid;
+  margin: auto;
+  border: 2px solid #d0d0d0;
+}
+
+.modal_text {
+  display: none;
+  background: #101010;
+  color: #d0d0d0;
+}
+
+.video_container {
+  position: relative;
+  padding-top: 56.25%;
+  border: 2px solid #d0d0d0;
+}
+
+iframe {
+  border: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
