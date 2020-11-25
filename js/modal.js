@@ -26,10 +26,12 @@ window.onload = function() {
     var thumbnail = thumbnails[i];
     thumbnail.onclick = function() {
       // Create a container
-      var modal = document.getElementsByClassName('modal')[0];
+      var modal = document.createElement('div');
+      modal.className = 'modal';
       var modal_container = document.createElement('div');
       modal_container.className = 'modal_container';
       modal.appendChild(modal_container);
+      document.body.appendChild(modal);
 
       // Fetch video and image links if available
       var vimeo_id = this.getAttribute('vimeo_id');
