@@ -1,4 +1,0 @@
-<div style="padding:56.25% 0 0 0;position:relative;border: 2px solid #d0d0d0;"><iframe src="https://www.youtube.com/embed/fq6UTNHto30?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; encrypted- media; modestbranding; gyroscope; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-<div style="padding:56.25% 0 0 0;position:relative;border: 2px solid #d0d0d0;"><iframe src="https://www.youtube.com/embed/RWGJg0OX9CQ" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; encrypted- media; modestbranding; gyroscope; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-pooppooppooppoop
