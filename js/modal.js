@@ -9,17 +9,25 @@ function launch_modal() {
 
   // Fetch video and image links if available
   var vimeo_id = this.getAttribute('vimeo_id');
+  var youtube_id = this.getAttribute('youtube_id');
   var img_src = this.getAttribute('img_src');
 
-  if (vimeo_id) {
+  if (vimeo_id || youtube_id) {
     // Create a video frame
     var container = document.createElement('div');
     container.className = 'video_container';
     var iframe = document.createElement('iframe');
-    iframe.src =
-      "https://player.vimeo.com/video/" +
-      vimeo_id +
-      "?title=0&byline=0&portrait=0&color=d0d0d0";
+    if (vimeo_id) {
+      iframe.src =
+        "https://player.vimeo.com/video/" +
+        vimeo_id +
+        "?title=0&byline=0&portrait=0&color=d0d0d0";
+    } else if (youtube_id) {
+      iframe.src =
+        "https://www.youtube.com/embed/" +
+        youtube_id +
+        "?rel=0&color=white";
+    }
     container.appendChild(iframe);
     modal_container.appendChild(container);
   } else if (img_src) {
