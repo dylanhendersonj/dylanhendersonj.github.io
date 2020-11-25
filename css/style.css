@@ -55,17 +55,19 @@ a:hover {
   opacity: 0; /* By default invisible */
   transition: .2s ease;
   background: #10101080; /* 50% Opacity */
-  color: #d0d0d0;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  text-align: center;
+  display: table;
 }
 
+/* For centering */
 .thumbnail_text_inner {
-  display: inline-block;
+  text-align: center;
+  color: #d0d0d0;
+  display: table-cell;
   vertical-align: middle;
 }
 

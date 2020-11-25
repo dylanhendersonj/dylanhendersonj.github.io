@@ -9,6 +9,16 @@ window.onload = function() {
     thumbnail.parentNode.insertBefore(thumbnail_column, thumbnail);
     thumbnail.remove();
   }
+
+  // Center the overlay text
+  var thumbnail_texts = document.getElementsByClassName('thumbnail_text');
+  for(var i = 0; i < thumbnail_texts.length; i++) {
+    var thumbnail_text = thumbnail_texts[i];
+    thumbnail_text.innerHTML =
+      "<div class='thumbnail_text_inner'>" +
+      thumbnail_text.innerHTML +
+      "</div>";
+  }
     
   // Create a modal for the thumbnails
   var thumbnails = document.getElementsByClassName('thumbnail_container');
