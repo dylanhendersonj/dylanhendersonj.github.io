@@ -61,6 +61,7 @@ window.onload = function() {
         var child = this.children[i];
         if (child.className == 'modal_text') {
           var text_container = document.createElement('div');
+          text_container.className = 'modal_text_display';
           text_container.innerHTML = child.innerHTML;
           modal_container.appendChild(text_container);
         }
