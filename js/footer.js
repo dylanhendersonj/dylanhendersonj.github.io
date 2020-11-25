@@ -12,6 +12,7 @@ function add_icon(f, href, img_src) {
   img.className = "footer_img";
   var link = document.createElement('a');
   link.href = href;
+  link.target = "_blank";
   link.appendChild(img);
   f.appendChild(link);
   var br = document.createElement("br");
