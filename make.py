@@ -47,25 +47,36 @@ def parse(folder):
         f.write(" &nbsp; ")
     f.write("</h2>")
 
-    # TODO Content
+
+    #Test
+    #m = open(readme, "a")
+   # m.write("poop")
+
+
+    #TODO Content
     with open(readme, 'r') as r:
         for line in r:
-        	if line == "do this":
-        		f.write("<h3>")
-                for h in fabfolders:
-                    link = os.path.join(root, "Fabrication", h, "index.html")
-                    f.write("<a href=\"" + link + "\">" + h + "</a>")
-                    f.write(" &nbsp; ")
-                    f.write("</h3>")
             f.write(line)
-    
-    #Fabrication folders
-    #f.write("<h3>")
-    #for h in fabfolders:
-#        link = os.path.join(root, "Fabrication", h, "index.html")
- #       f.write("<a href=\"" + link + "\">" + h + "</a>")
-  #      f.write(" &nbsp; ")
-   # f.write("</h3>")
+
+    #Fabrication 
+    if "Fabrication" in folder:
+        f.write("<h3>")
+        for h in fabfolders:
+            link = os.path.join(root, "Fabrication", h, "index.html")
+            f.write("<a href=\"" + link + "\">" + h + "</a>")                
+            f.write(" &nbsp; ")
+        f.write("</h3>")
+        #with open(readme, 'r') as r:
+         #    for line in r:
+          #       f.write(line)
+
+        #fafiles = open(readme, 'r')
+        #fcontent = fafiles.readlines()
+        #x = fcontent.count("</div>")
+        #print (x)
+        #if x == 1:
+         #   m.write("poop")
+
 
     # Footer Icons
     f.write("<div class=\"footer\">")
