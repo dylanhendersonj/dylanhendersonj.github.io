@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>DYLAN HENDERSON/Animation</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -8,22 +7,16 @@
 </head>
 
 <body>
-  <!--Header-->
-  <a href="../index.html">
-    <h1>DYLAN HENDERSON</h1>
-  </a>
-  <h2>
-    <a href="../Animation/index.html">Animation</a> &nbsp; 
-    <a href="../Fabrication/index.html">Fabrication</a> &nbsp; 
-    <a href="../Films/index.html">Films</a> &nbsp; 
-    <a href="../About/index.html">About</a> &nbsp; 
-  </h2>
+  <!-- Include the navigation bar -->
+  <div id='navigation'></div>
+  <script src="../navigation.js"></script>
 
   <!--Make a big video on top-->
   <div class="video_container">
     <iframe src="https://player.vimeo.com/video/305396169?title=0&byline=0&portrait=0&color=d0d0d0"></iframe>
   </div>
 
+  <!-- Add the gallery elements -->
   <div vimeo_id="483252611" class="thumbnail_container">
     <img class="thumbnail_img" src="https://live.staticflickr.com/65535/50642614402_bae2cbb827_h.jpg"/>
     <div class="thumbnail_text">Sad Bastard Puppet Test</div>
@@ -66,19 +59,8 @@
     </div>
   </div>
 
-  <div class="modal"></div>
-
-  <!--Footer-->
-  <div class="footer">
-      <a href="https://www.instagram.com/dylanjhenderson">
-          <img src="../media/insta.png" width=22 height=22/>
-      </a> &nbsp; 
-      <a href="mailto:dylanhendersonj@gmail.com">
-          <img src="../media/mail.png" width=22 height=22/>
-      </a> &nbsp; 
-      <a href="https://vimeo.com/user81614983">
-          <img src="../media/vimeo.png" width=22 height=22/>
-      </a> &nbsp; 
-  </div>
+  <!-- Include the footer links -->
+  <div id='footer'></div>
+  <script src="../footer.js"></script>
 </body>
 </html>
