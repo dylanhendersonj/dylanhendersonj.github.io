@@ -1,5 +1,5 @@
-do this
+<div class="col-4 center"> <img src="https://live.staticflickr.com/7823/32502788437_c3eeeb80a7_n.jpg" alt="The Patient and Doctor" style="width:100%; border: 2px solid #d0d0d0;"> <h3> "<a href="file:///Users/dylanhendersonj/dillies_first_website/Fabrication/Plastic%20Flowers%20Never%20Wilt/index.html">Plastic Flowers Never Wilt</a>" </h3> </div>
 
-<div style="box-sizing: inherit; width: 320px; height: 200px; position: relative; border: 2px solid #d0d0d0;"><a data-flickr-embed="true" title="The Patient and Doctor"><img src="https://live.staticflickr.com/7823/32502788437_c3eeeb80a7_n.jpg" width="320" height="200" alt="The Patient and Doctor"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<div class="col-4 center"> <img src="https://live.staticflickr.com/7851/46529250475_857c0c9310_k.jpg" alt="CreepBaby" style="width:100%; border: 2px solid #d0d0d0;"> </div>
 
-<div style="box-sizing: inherit; width: 320px; height: 200px; position: relative; border: 2px solid #d0d0d0;"><a data-flickr-embed="true" title="Screen Shot 2019-03-22 at 3.22.54 PM"><img src="https://live.staticflickr.com/7851/46529250475_9cbb1ab908_n.jpg" width="320" height="200" alt="Screen Shot 2019-03-22 at 3.22.54 PM"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<div class="col-4 center"> <img src="https://live.staticflickr.com/65535/50279597516_edf262e057_h.jpg" alt="Tree House" style="width:100%; border: 2px solid #d0d0d0;"> </div>
