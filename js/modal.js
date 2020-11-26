@@ -28,6 +28,7 @@ function launch_modal() {
         youtube_id +
         "?rel=0&color=white";
     }
+    iframe.setAttribute('allowfullscreen', '');
     container.appendChild(iframe);
     modal_container.appendChild(container);
   } else if (img_src) {
