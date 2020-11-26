@@ -18,6 +18,6 @@ function add_icon(f, href, img_src) {
   var br = document.createElement("br");
   f.appendChild(br);
 }
-add_icon(footer, "https://www.instagram.com/dylanjhenderson", "../media/insta.png");
-add_icon(footer, "mailto:dylanjhendersonj@gmail.com", "../media/mail.png");
-add_icon(footer, "https://vimeo.com/user81614983", "../media/vimeo.png");
+add_icon(footer, "https://www.instagram.com/dylanjhenderson", "/media/insta.png");
+add_icon(footer, "mailto:dylanjhendersonj@gmail.com", "/media/mail.png");
+add_icon(footer, "https://vimeo.com/user81614983", "/media/vimeo.png");

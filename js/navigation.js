@@ -1,10 +1,25 @@
-document.getElementById("navigation").innerHTML =
-"<a href='../index.html'>" +
-"<h1>DYLAN HENDERSON</h1>" +
-"</a>" +
-"<h2>" +
-"<a href='../Animation/index.html'>Animation</a> &nbsp;" +
-"<a href='../Fabrication/index.html'>Fabrication</a> &nbsp;" +
-"<a href='../Films/index.html'>Films</a> &nbsp;" +
-"<a href='../About/index.html'>About</a> &nbsp;" +
-"</h2>";
+// Create a navigation element
+var navigation = document.createElement('div');
+document.body.appendChild(navigation);
+
+// Make the title
+var title = document.createElement('a');
+title.innerHTML = "<h1>DYLAN HENDERSON</h1>";
+title.href = "/index.html";
+navigation.appendChild(title);
+
+// Create the headers
+var headers = document.createElement('h2');
+navigation.appendChild(headers);
+function make_header(h, name, href) {
+  var link = document.createElement('a');
+  link.innerHTML = name;
+  link.href = href;
+  h.appendChild(link);
+  // Add whitespace
+  h.innerHTML += '&nbsp;&nbsp;';
+}
+make_header(headers, "Animation", "/Animation/index.html");
+make_header(headers, "Fabrication", "/Fabrication/index.html");
+make_header(headers, "Films", "/Films/index.html");
+make_header(headers, "About", "/About/index.html");
