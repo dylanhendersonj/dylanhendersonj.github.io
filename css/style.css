@@ -3,7 +3,7 @@ body {
   color:#d0d0d0;
   background-color:#101010;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 0%;
   margin-right: 10%;
   margin-left: 10%;
   overflow: visible;
@@ -11,6 +11,10 @@ body {
 
 h1 {
   color: #ffffff;
+}
+
+h2 {
+  color: #d3d3d3;
 }
 
 a {
