@@ -3,7 +3,7 @@ body {
   color:#d0d0d0;
   background-color:#101010;
   margin-top: 5%;
-  margin-bottom: 0%;
+  margin-bottom: 5%;
   margin-right: 10%;
   margin-left: 10%;
   overflow: visible;
@@ -11,11 +11,27 @@ body {
 
 h1 {
   color: #ffffff;
+  letter-spacing: 4px;
 }
 
 h2 {
   color: #d3d3d3;
+  font-weight: 100;
 }
+
+/* Project Title Font */
+h3 {
+  color: #ffffff;
+  font-weight: 50;
+  transform: scale(.7, 1);
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 8px;
+  margin-top: 5%;
+  margin-bottom: 1%;
+
+}
+
 
 a {
   color:#d0d0d0;
