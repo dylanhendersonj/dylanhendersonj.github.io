@@ -50,6 +50,7 @@ img {
 
 [class*="col-"] {
   float: left;
+  padding: 3%;
 }
 
 .col-1 {
