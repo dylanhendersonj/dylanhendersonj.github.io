@@ -21,5 +21,6 @@ function make_header(h, name, href) {
 }
 make_header(headers, "Animation", "/Animation/index.html");
 make_header(headers, "Fabrication", "/Fabrication/index.html");
+make_header(headers, "Lighting", "/Lighting/index.html");
 make_header(headers, "Films", "/Films/index.html");
 make_header(headers, "About", "/About/index.html");
